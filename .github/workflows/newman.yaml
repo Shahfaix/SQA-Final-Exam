@@ -4,15 +4,14 @@ on: [push]
 jobs:
   api-test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        version: ['16','18']
+   
     steps:
+        
       - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{matrix.version}}
+          node-version: "14"
 
       - run: npm install newman
       - uses: mkdir testResults 
