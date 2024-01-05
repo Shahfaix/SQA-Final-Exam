@@ -2,7 +2,7 @@ name: postman
 
 on: [push]
 jobs:
-  check-bats-version:
+  api-test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
